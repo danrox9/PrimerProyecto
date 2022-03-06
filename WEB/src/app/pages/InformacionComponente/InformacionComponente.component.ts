@@ -64,7 +64,7 @@ export class InformacionComponenteComponent implements OnInit {
       }
       alert('Has pujado ' + this.pujaForm.value.pujaPrecio + '€');
       this.PuJaSeRvIcE.postPujaData(this.idPiedra, this.pujaForm.value);
-      // window.location.reload();
+      window.location.reload();
     }
   }
 

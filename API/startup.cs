@@ -15,7 +15,7 @@ public class Startup
         services.AddSingleton<LibraryContext>(_ =>
             new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddSingleton<PujaContext>(_ =>
+        services.AddTransient<PujaContext>(_ =>
             new PujaContext(Configuration.GetConnectionString("DefaultConnection")));
 
 
