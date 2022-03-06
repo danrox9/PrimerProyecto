@@ -7,7 +7,7 @@ import { Faltas } from '../models/faltas.model';
 @Injectable()
 export class FaltasService {
   constructor(private http: HttpClient) {}
-  getBookData() : Observable<Faltas[]> {
+  getFaltasData() : Observable<Faltas[]> {
     return this.http.get<Faltas[]>(environment.API_URL + 'faltas');
   }
 }

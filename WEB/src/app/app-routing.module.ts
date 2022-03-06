@@ -1,26 +1,21 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateBookComponent } from './components/create-book/create-book.component';
-import { ChartComponent } from './pages/chart/chart.component';
-import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
+import { HomeComponentComponent } from 'src/app/pages/home/home-component/home-component.component';
+import { InformacionComponenteComponent } from './pages/InformacionComponente/InformacionComponente.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponentComponent,
+    },
+    {
+    path: 'piedras/:idPiedra',
+    component: InformacionComponenteComponent,
   },
-  {
-    path: 'create',
-    component: CreateBookComponent,
-  },
-  {
-    path: 'chart',
-    component: ChartComponent,
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
